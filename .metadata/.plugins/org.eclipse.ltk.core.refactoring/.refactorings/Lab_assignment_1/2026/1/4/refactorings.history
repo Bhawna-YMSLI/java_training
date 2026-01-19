@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;LabAssignment1.Next_date_calculator&apos; to &apos;Q5_Next_date_calculator&apos;&#x0D;&#x0A;- Original project: &apos;Lab_assignment_1&apos;&#x0D;&#x0A;- Original element: &apos;LabAssignment1.Next_date_calculator&apos;&#x0D;&#x0A;- Renamed element: &apos;LabAssignment1.Q5_Next_date_calculator&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Next_date_calculator&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;LabAssignment1{Next_date_calculator.java[Next_date_calculator" matchStrategy="1" name="Q5_Next_date_calculator" qualified="false" references="true" similarDeclarations="false" stamp="1768736536851" textual="false" version="1.0"/>
+</session>

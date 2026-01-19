@@ -1,0 +1,18 @@
+package Q4_Employee_Payment_System;
+
+import java.util.ArrayList;
+
+public class EmployeeApp {
+	public static void main(String args[]) {
+//		Use ArrayList<Employee>
+//		Add at least one of each employee type
+//		Loop and print weekly salary using polymorphism
+		
+		ArrayList<Employee>employees = new ArrayList<>() ;
+		employees.add(new SalariedEmployee("Isha","10010",270000));
+		employees.add(new HourlyEmployee("Aditi","12300",800));
+		employees.add(new CommissionEmployee("Bhawna","4400",650));
+		
+	}
+
+}

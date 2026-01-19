@@ -1,0 +1,31 @@
+package Q3_Banking_System;
+
+public class SavingsAccount extends Account {
+    int interest  ;
+    double maxWithdrawLimit ;
+    double minBalaceAllowed ;
+    
+    public SavingsAccount( double maxWithdrawLimit, double minBalaceAllowed) {
+		
+		this.interest =5;
+		this.maxWithdrawLimit = getAccountBalance();
+		this.minBalaceAllowed = 5000;
+	}
+	double getBalance() {
+    	double accountBalance =  getAccountBalance();
+    	return accountBalance + (accountBalance * interest / 100);
+    }
+    void  withdraw(double amount) {
+    	if(amount <= maxWithdrawLimit ) {
+    		if(maxWithdrawLimit-amount >= minBalaceAllowed) {
+    			maxWithdrawLimit = maxWithdrawLimit-amount ;
+    		}
+    		else {
+    			System.out.println("Minimum balance after withdraw must be minimum 5000");
+    		}
+    	}
+    	else {
+    		System.out.println("Cannot withdraw money , as amount of withdrawl is greater than balanace") ;
+    	}
+    }
+}

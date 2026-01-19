@@ -1,0 +1,29 @@
+package LabAssignment1;
+
+//Requirements
+//Input day, month, year from the user.
+//Validate the date.
+//Compute the next day’s date manually.
+//Display both dates.
+
+
+//Sample Output
+//Enter day: 31
+//Enter month: 12
+//Enter year: 2022
+//Today: 31/12/2022
+//Next Date: 1/1/2023
+
+
+//Validations Required
+//
+//Correct days for each month
+//Leap year logic:
+//(year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+//Month-end transitions
+//Year-end transition
+
+
+public class Q5_Next_date_calculator {
+   
+}

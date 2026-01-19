@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="Q5_Unified_Payment_System.Payable"/>
+    <fullyQualifiedTypeName name="Q4_Employee_Payment_System.CommissionEmployee"/>
+    <fullyQualifiedTypeName name="Q4_Employee_Payment_System.HourlyEmployee"/>
+    <fullyQualifiedTypeName name="Q4_Employee_Payment_System.SalariedEmployee"/>
+    <fullyQualifiedTypeName name="Q4_Employee_Payment_System.Employee"/>
+</qualifiedTypeNameHistroy>

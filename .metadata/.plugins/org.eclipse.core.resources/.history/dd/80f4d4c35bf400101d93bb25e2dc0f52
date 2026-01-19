@@ -1,0 +1,26 @@
+package Q5_Unified_Payment_System;
+import  Q4_Employee_Payment_System.CommissionEmployee  ;
+import  Q4_Employee_Payment_System.HourlyEmployee  ;
+import  Q4_Employee_Payment_System.SalariedEmployee  ;
+import  Q4_Employee_Payment_System.Employee  ;
+
+public class PaymentApp {
+	 public static void main(String args[]) {
+//		     Demonstrate:
+//			 Create objects: invoices + different employees
+//			 Store them in a single ArrayList<Payable>
+//			 Loop through and call getPayment()
+//			 Display payments uniformly
+		 
+		 Invoice invoice1 = new Invoice("1001E","Electronics",100,900);
+		 SalariedEmployee salaried = new SalariedEmployee("Isha", "E001", 5000);
+		 HourlyEmployee hourly = new HourlyEmployee("Bhawna", "E002", 200);
+
+		 
+		 CommissionEmployee commission = new CommissionEmployee("Charlie", "E003", 10); 
+		 
+			hourly.setHoursWorked(40); // 40 hours
+			commission.setTotalSales(8000); // total sales ₹8000
+
+	   }
+}

@@ -1,0 +1,15 @@
+package Q2_Book_Store_Management;
+
+public class BookStoreApp {
+	public static void main(String []args) {
+//		Demonstrate the following:
+		
+//			Add sample books
+//			Order new & existing books
+//			Sell books
+//			Display inventory after each operation
+		
+		
+	}
+
+}

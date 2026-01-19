@@ -1,0 +1,31 @@
+package Q1_Circle;
+
+public class CircleApp {
+	public static void main(String[] args) {
+
+		Circle circle1 = new Circle();
+		System.out.println(circle1.getRadius());
+		System.out.println(circle1.getArea());
+		System.out.println(circle1.getCircumference());
+
+		try {
+			Circle circle2 = new Circle(10);
+			System.out.println(circle2.getRadius());
+			System.out.println(circle2.getArea());
+			System.out.println(circle2.getCircumference());
+		} catch (NegativeRadiusException e) {
+			System.out.println(e.getMessage());
+		}
+		try {
+			Circle circle3 = new Circle(-20);
+			System.out.println(circle3.getRadius());
+			System.out.println(circle3.getArea());
+			System.out.println(circle3.getCircumference());
+		} catch (NegativeRadiusException e) {
+			System.out.println(e.getMessage());
+		}
+
+		System.out.println("Circle testing completed.");
+
+	}
+}

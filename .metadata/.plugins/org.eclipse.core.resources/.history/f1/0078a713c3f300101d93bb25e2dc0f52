@@ -1,0 +1,17 @@
+package Q4_Employee_Payment_System;
+
+public class CommissionEmployee extends Employee{
+	
+	private double commissionRate ;
+	private double  totalSales ;
+	
+	double getPayment() {
+		return  (commissionRate% * totalSales) / 100 ;
+	}
+
+	public CommissionEmployee(String name, String employeeId, double commissionRate) {
+		super(name, employeeId);
+		this.commissionRate = commissionRate;
+		totalSales = 0;
+	}
+}

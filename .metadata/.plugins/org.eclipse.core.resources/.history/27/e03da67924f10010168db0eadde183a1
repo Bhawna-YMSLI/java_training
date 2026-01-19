@@ -1,0 +1,49 @@
+package LabAssignment1;
+
+
+//Q1. Fibonacci Series & Average Calculation
+
+//						Requirements
+//Generate the first 20 Fibonacci numbers using iterative logic.
+//Store all numbers in an array.
+//Print the numbers in one line.
+//Compute and print the average.
+
+
+//				Expected Output
+//The first 20 Fibonacci numbers are:
+//1 1 2 3 5 8 ... 6765
+//Average: 885.5
+
+public class Q1_attempt1_Fibonacci {
+	public static void main(String []args) {
+		int []fibonacii_series = new int[21] ;
+		fibonacii_series[0]=1;
+		fibonacii_series[1]=1;
+		
+		for(int i=2;i<21;i++) {
+			fibonacii_series[i] = fibonacii_series[i-1] + fibonacii_series[i-2] ;	
+		}
+		
+		System.out.println("The first 20 Fibonacci numbers are : ");
+		for(int i=0;i<21;i++) {
+			System.out.print(fibonacii_series[i] +" ");
+		}
+		
+		double average = 0 ;
+		int sum = 0;
+		
+		for(int i=0;i<21;i++) {
+			sum += fibonacii_series[i];
+		}
+		average = sum / 21 ;
+		System.out.print("\nAverage : "+ average) ;
+		
+		
+		
+		
+		
+		
+	}
+
+}
