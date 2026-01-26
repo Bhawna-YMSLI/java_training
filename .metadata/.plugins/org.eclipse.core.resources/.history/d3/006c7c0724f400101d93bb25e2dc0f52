@@ -1,0 +1,37 @@
+package Q1_Circle;
+
+class NegativeRadiusException extends RuntimeException{
+	NegativeRadiusException(){
+		System.out.println("Radius cannot be negative");
+	}
+}
+
+public class Circle {
+    private double radius ;
+    private String color ;
+    
+    public Circle() {
+    	radius = 1.0 ;
+    	color = "red" ;
+    	
+    }
+    
+    public Circle(double radius) {
+    	if(radius <0) {
+    		throw new NegativeRadiusException();
+    	}
+    	this.radius = radius ;
+    	color = "red" ;
+    	
+    }
+    
+    double getRadius() {
+    	return radius;
+    }
+    double getArea() {
+    	return Math.PI * radius * radius ;
+    }
+    double getCircumference() {
+    	return 2* Math.PI * radius ;
+    }
+}

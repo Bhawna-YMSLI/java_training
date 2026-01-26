@@ -1,0 +1,106 @@
+package Q2_Book_Store_Management;
+
+import java.util.Scanner;
+
+public class BookStore {
+	int capacity ;
+	int currentCapacity ;
+	Book books[];
+
+	public BookStore() {
+
+		capacity = 10;
+		currentCapacity = 0;
+		books = new Book[capacity] ;
+	}
+
+	//	sell(String title, int count)
+	//	Search by bookTitle.
+	//	If found → decrease copies.
+	//	If not found → display “Book not found.”
+	//	If insufficient copies → display “Not enough stock.”
+	void sell(String title, int count) {
+		boolean bookFound = false;
+		int i;
+		for( i =0;i<currentCapacity;i++) {
+			if(books[i].getBookTitle().equals(title)) {
+				bookFound = true;
+
+			}
+		}
+
+		if(bookFound)
+		{
+			if( books[i].getNumOfCopies() >= count) {
+				books[i].setNumOfCopies(  books[i].getNumOfCopies() - count);
+			}
+			else {
+				System.out.println("Not enough stock.");
+			}
+
+
+		}
+		else {
+			System.out.println("Book not found");
+		}
+
+	}
+
+	//	order(String isbn, int count)
+	//	Search by ISBN.
+	//	If book exists → increase quantity.
+	//	If not found → create a new Book object (ask user for title & author).
+	//	Add the new Book if space is available.
+	void order(String isbn, int count) {
+		boolean bookFound = false;
+		int i;
+		for( i =0;i<currentCapacity;i++) {
+			if(books[i].getISBN().equals(isbn)   ) {
+				bookFound = true;
+
+			}
+		}
+		if(bookFound)
+		{
+			int NumOfCopies = books[i].getNumOfCopies();
+			books[i].setNumOfCopies(NumOfCopies+count);
+
+
+		}
+		else {
+			if(currentCapacity < capacity) {
+
+
+				Scanner sc = new Scanner(System.in) ;
+				System.out.print("Enter the book title");
+
+				String title;
+				title = sc.nextLine();
+
+				System.out.print("Enter the author");
+
+				String author;
+				author = sc.nextLine();
+
+				Book book = new Book(title,author,isbn,count) ;
+
+				books[currentCapacity] =book;
+				currentCapacity++;
+			}
+			else {
+				System.out.println("Space is not available");
+			}
+		}
+
+
+	}
+
+	//	display()
+	//	Print all books using Book’s display() method.
+	void display () {
+		for(int i =0;i<currentCapacity;i++) {
+			books[i].display();
+		}
+	}
+
+}

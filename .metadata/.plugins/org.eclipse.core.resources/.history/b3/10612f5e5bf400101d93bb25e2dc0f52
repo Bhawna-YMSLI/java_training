@@ -1,0 +1,14 @@
+package Q5_Unified_Payment_System;
+
+public class PaymentApp {
+	 public static void main(String args[]) {
+//		     Demonstrate:
+//			 Create objects: invoices + different employees
+//			 Store them in a single ArrayList<Payable>
+//			 Loop through and call getPayment()
+//			 Display payments uniformly
+		 
+		 Invoice invoice1 = new Invoice("1001E","Electronics",100,900);
+		 Invoice invoice2 = new Invoice("1020E","Grocery",240,88);
+	   }
+}

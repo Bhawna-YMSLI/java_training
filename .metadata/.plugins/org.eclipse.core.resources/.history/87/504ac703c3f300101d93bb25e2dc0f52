@@ -1,0 +1,7 @@
+package Q4_Employee_Payment_System;
+
+public class CommissionEmployee extends Employee{
+	double getPayment() {
+		// (commissionRate% * totalSales) / 100
+	}
+}

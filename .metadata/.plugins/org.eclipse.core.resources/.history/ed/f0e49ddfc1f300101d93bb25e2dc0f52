@@ -1,0 +1,6 @@
+package Q4_Employee_Payment_System;
+
+public class SalariedEmployee extends SalariedEmployee {
+// 	Paid a fixed weekly salary.
+
+}

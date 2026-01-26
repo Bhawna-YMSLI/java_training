@@ -1,0 +1,65 @@
+package LabAssignment1;
+
+import java.util.Scanner;
+
+//		Requirements
+//Prompt user for number of students.
+//Collect grades into an int[].
+//Each grade must be between 0 and 100.
+//If invalid, print:
+//Invalid grade. Try again.
+//Compute and print the average.
+
+//		Sample Interaction
+//Enter number of students: 3
+//Enter grade for student 1: 55
+//Enter grade for student 2: 108
+//Invalid grade. Try again.
+//Enter grade for student 2: 56
+//Enter grade for student 3: 57
+//Average: 56.0
+
+//		Corner Cases
+//Number of students = 0 → show message and exit
+//Reject negative grades
+//Reject grades > 100
+
+
+public class Q2_attempt1_Grades_Average_Calculator_with_Validation {
+	public static void main(String []args) {
+
+		int numberOfStudents ;
+		Scanner scanner = new Scanner(System.in) ;
+		System.out.print("Enter the number of students : ");
+		numberOfStudents = scanner.nextInt();
+		if (numberOfStudents == 0) {
+			System.out.println("No students to calculate average.");
+			return;
+		}
+		int grades[] = new int [numberOfStudents+1];
+
+		int i =1 ;
+		while(i<=numberOfStudents) {
+			System.out.print("Enter grade for student " + i +" : ") ;
+			int inp = scanner.nextInt();
+			if(inp<0 || inp>100) {
+				System.out.println("Invalid grade. Try again.");
+			}
+			else {
+				grades[i] = inp ;
+				i++;
+			}
+		}
+
+		// calculating average
+		int sum_grades =0 ;
+		for(int j = 1 ; j<=numberOfStudents ;j++) {
+			sum_grades += grades[j] ;
+		}
+		double average = (double) sum_grades / numberOfStudents ;
+
+		System.out.print("Average : " + average) ;
+		scanner.close();
+
+	}
+}

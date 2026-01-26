@@ -1,0 +1,8 @@
+package Q1_Circle;
+
+public class NegativeRadiusException extends Exception {
+	NegativeRadiusException() {
+		super("Radius cannot be negative");
+	}
+}
+F

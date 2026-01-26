@@ -1,0 +1,27 @@
+package Q4_Employee_Payment_System;
+
+public abstract class Employee {
+//	Include:
+//	    Common attributes: name, employeeId
+//		Abstract getPayment() or overridden method
+	private String name;
+	private String employeeId;
+
+	abstract double getPayment();
+
+	public Employee(String name, String employeeId) {
+		this.name = name;
+		this.employeeId = employeeId;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	
+
+}

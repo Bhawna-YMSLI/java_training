@@ -1,0 +1,29 @@
+package LabAssignment1;
+//		Requirements
+//Prompt user for number of students.
+//Collect grades into an int[].
+//Each grade must be between 0 and 100.
+//If invalid, print:
+//Invalid grade. Try again.
+//Compute and print the average.
+
+//		Sample Interaction
+//Enter number of students: 3
+//Enter grade for student 1: 55
+//Enter grade for student 2: 108
+//Invalid grade. Try again.
+//Enter grade for student 2: 56
+//Enter grade for student 3: 57
+//Average: 56.0
+
+//		Corner Cases
+//Number of students = 0 → show message and exit
+//Reject negative grades
+//Reject grades > 100
+
+
+public class Q2_attempt1_Grades_Average_Calculator_with_Validation {
+	public static void main(String []args) {
+		
+	}
+}

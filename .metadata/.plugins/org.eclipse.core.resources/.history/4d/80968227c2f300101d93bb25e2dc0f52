@@ -1,0 +1,5 @@
+package Q4_Employee_Payment_System;
+
+public class HourlyEmployee extends Employee {
+
+}

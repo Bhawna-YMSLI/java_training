@@ -1,0 +1,32 @@
+package Q3_Banking_System;
+
+public class SavingsAccount extends Account {
+	  private final int interest = 5;    
+    
+    private final double minBalanceAllowed = 5000;
+    
+    
+	double getBalance() {
+    	double accountBalance =  getAccountBalance();
+    	return accountBalance + (accountBalance * interest / 100);
+    }
+	
+	 @Override
+    void  withdraw(double amount) {
+		 double currentBalance = getAccountBalance();
+		 
+    	if(amount <= currentBalance ) {
+    		if(currentBalance-amount >= minBalanceAllowed) {
+    			setAccountBalance(currentBalance - amount);
+    			System.out.println("Withdrawal successful. Remaining balance: " + getAccountBalance());
+    			 
+    		}
+    		else {
+    			System.out.println("Minimum balance after withdrawal must be at least ₹5000.");
+    		}
+    	}
+    	else {
+    		System.out.println("Cannot withdraw money, amount exceeds available balance.");
+    	}
+    }
+}

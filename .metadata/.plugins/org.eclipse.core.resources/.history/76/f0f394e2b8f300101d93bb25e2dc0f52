@@ -1,0 +1,5 @@
+package Q3_Banking_System;
+
+public interface Account {
+
+}

@@ -1,0 +1,45 @@
+package Q2_Book_Store_Management;
+
+public class BookStoreApp {
+	public static void main(String []args) {
+		//		Demonstrate the following:
+
+		//			Add sample books
+		//			Order new & existing books
+		//			Sell books
+		//			Display inventory after each operation
+		BookStore store = new BookStore();
+
+		store.addBook(new Book("Java Programming", "James Gosling", "ISBN001", 10));
+		store.addBook(new Book("Data Structures", "Mark Allen", "ISBN002", 5));
+
+
+		System.out.println("Initial Inventory:");
+		store.display();
+
+		// Order existing book
+		System.out.println("\nOrdering existing book:");
+		store.order("ISBN001", 5);
+		store.display();
+
+		// Order new book
+		System.out.println("\nOrdering new book:");
+		store.order("ISBN003", 7);
+		store.display();
+
+		// Sell books
+		System.out.println("\nSelling books:");
+		store.sell("Java Programming", 3);
+		store.display();
+
+		// Attempt to sell more than stock
+		System.out.println("\nAttempting oversell:");
+		store.sell("Data Structures", 10);
+
+		// Sell non-existing book
+		System.out.println("\nSelling non-existing book:");
+		store.sell("Python Basics", 2);
+
+	}
+
+}

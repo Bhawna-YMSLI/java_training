@@ -1,0 +1,15 @@
+package Q5_Unified_Payment_System;
+
+public class Invoice implements Payable  {
+	// Attributes
+	private String invoiceId ;
+	private String 	itemDescription ;
+	private int quantity ;
+	private double pricePerUnit ;
+	
+	
+	//Payment
+	public double getPayment() {
+	return quantity * pricePerUnit;
+	}
+}

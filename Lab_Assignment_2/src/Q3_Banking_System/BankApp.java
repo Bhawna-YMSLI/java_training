@@ -1,0 +1,47 @@
+package Q3_Banking_System;
+
+public class BankApp {
+	public static void main(String[] args) {
+		System.out.println("=== SAVINGS ACCOUNT TEST ===");
+		// Create a SavingsAccount
+		SavingsAccount sa = new SavingsAccount();
+		sa.deposit(20000); // deposit initial amount
+		System.out.println("Deposited ₹20000 into Savings Account.");
+
+		// Check balance with interest
+		System.out.println("Balance with interest: ₹" + sa.getBalance());
+
+		// Withdraw an amount within limit
+		sa.withdraw(10000); // should succeed
+		System.out.println("Balance after withdrawal: ₹" + sa.getAccountBalance());
+
+		// Attempt to withdraw below minimum balance
+		sa.withdraw(12000); // should fail (min balance 5000)
+		System.out.println("Balance after failed withdrawal: ₹" + sa.getAccountBalance());
+
+		System.out.println("\n=== CURRENT ACCOUNT TEST ===");
+		// Create a CurrentAccount with overdraft limit
+		CurrentAccount ca = new CurrentAccount("TLN12345", 5000);
+		ca.deposit(10000);
+		System.out.println("Deposited ₹10000 into Current Account.");
+
+		// Withdraw within balance
+		ca.withdraw(8000); // should succeed
+		System.out.println("Balance after withdrawal: ₹" + ca.getAccountBalance());
+
+		// Withdraw using overdraft
+		ca.withdraw(7000); // uses overdraft 5000, should succeed
+		System.out.println("Balance after overdraft withdrawal: ₹" + ca.getAccountBalance());
+
+		// Attempt to exceed overdraft
+		ca.withdraw(2000); // should fail
+		System.out.println("Balance after failed withdrawal: ₹" + ca.getAccountBalance());
+
+		// Display final balances
+		System.out.println("\n--- FINAL BALANCES ---");
+		System.out.println("Savings Account balance (actual): ₹" + sa.getAccountBalance());
+		System.out.println("Savings Account balance (with interest): ₹" + sa.getBalance());
+		System.out.println("Current Account balance: ₹" + ca.getAccountBalance());
+	}
+
+}

@@ -1,0 +1,15 @@
+package Q4_Employee_Payment_System;
+
+public class HourlyEmployee extends Employee {
+	private int hoursWorked ;
+	private double hourlyRate ;
+
+public HourlyEmployee(String name, String employeeId, double hourlyRate) {
+	super(name, employeeId);
+	hoursWorked =0;
+	this.hourlyRate = hourlyRate;
+}
+double getPayment() {
+	return  hoursWorked * hourlyRate ;
+}
+}

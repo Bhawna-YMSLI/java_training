@@ -1,0 +1,15 @@
+package LabAssignment1;
+//			Task
+//public static int[] copyOf(int[] array)
+
+//			Requirements
+//Return a new independent array with the same values.
+//Do not return the same reference.
+//Demonstrate independence by modifying the copied array.
+
+//			Corner Cases
+//Empty array → return new empty array
+//Single-element array → return new array
+public class Q3_attempt1_Array_Copy_Method {
+
+}

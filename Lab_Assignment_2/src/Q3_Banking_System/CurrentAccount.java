@@ -1,0 +1,31 @@
+package Q3_Banking_System;
+
+public class CurrentAccount extends Account {
+
+	private String tradeLicenseNumber;
+	double overdraft; // (allow negative balance until overdraft limit)
+	
+	 public CurrentAccount(String tradeLicenseNumber, double overdraft) {
+	        this.tradeLicenseNumber = tradeLicenseNumber;
+	        this.overdraft = overdraft;
+	    }
+
+	// Return the current balance without interest.
+	double getBalance() {
+		return getAccountBalance();
+	}
+
+	@Override
+	void withdraw(double amount) {
+
+		// Allow if: amount <= accountBalance + overdraft
+		// Else display:Withdrawal exceeds overdraft limit.
+		double currentBalance = getBalance();
+		if (amount <= currentBalance + overdraft) {
+			setAccountBalance(currentBalance - amount);
+		} else {
+			System.out.println("Withdrawal exceeds overdraft limit.");
+		}
+	}
+
+}

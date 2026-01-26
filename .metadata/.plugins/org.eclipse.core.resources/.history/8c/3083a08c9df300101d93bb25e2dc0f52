@@ -1,0 +1,85 @@
+package Q2_Book_Store_Management;
+
+import java.util.Scanner;
+
+public class BookStore {
+	 private int capacity;
+	    private int currentCapacity;
+	    private Book[] books;
+
+	public BookStore() {
+
+		capacity = 10;
+		currentCapacity = 0;
+		books = new Book[capacity] ;
+	}
+	public void addBook(Book book) {
+	    if (currentCapacity < capacity) {
+	        books[currentCapacity++] = book;
+	    } else {
+	        System.out.println("Bookstore is full.");
+	    }
+	}
+
+	//	sell(String title, int count)
+	//	Search by bookTitle.
+	//	If found → decrease copies.
+	//	If not found → display “Book not found.”
+	//	If insufficient copies → display “Not enough stock.”
+	void sell(String title, int count) {
+		for (int i = 0; i < currentCapacity; i++) {
+			if (books[i].getBookTitle().equalsIgnoreCase(title)) {
+
+				if (books[i].getNumOfCopies() >= count) {
+					books[i].setNumOfCopies(books[i].getNumOfCopies() - count);
+					System.out.println("Book sold successfully.");
+				} else {
+					System.out.println("Not enough stock.");
+				}
+				return;
+			}
+		}
+		System.out.println("Book not found.");
+	}
+
+
+	//	order(String isbn, int count)
+	//	Search by ISBN.
+	//	If book exists → increase quantity.
+	//	If not found → create a new Book object (ask user for title & author).
+	//	Add the new Book if space is available.
+	void order(String isbn, int count) {
+		for (int i = 0; i < currentCapacity; i++) {
+			if (books[i].getISBN().equals(isbn)) {
+				books[i].setNumOfCopies(books[i].getNumOfCopies() + count);
+				System.out.println("Stock updated.");
+				return;
+			}
+		}
+
+		if (currentCapacity < capacity) {
+			Scanner sc = new Scanner(System.in);
+
+			System.out.print("Enter the book title: ");
+			String title = sc.nextLine();
+
+			System.out.print("Enter the author: ");
+			String author = sc.nextLine();
+
+			books[currentCapacity++] = new Book(title, author, isbn, count);
+			System.out.println("New book added.");
+		} else {
+			System.out.println("Space is not available.");
+		}
+	}
+
+
+	//	display()
+	//	Print all books using Book’s display() method.
+	void display () {
+		for(int i =0;i<currentCapacity;i++) {
+			books[i].display();
+		}
+	}
+
+}
